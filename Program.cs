@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-var port = Environment.GetEnvironmentVariable("WEBSITES_PORT") ?? "80";
+var port = Environment.GetEnvironmentVariable("WEBSITES_PORT") ?? "8080";
 app.Urls.Add($"http://0.0.0.0:{port}");
 
 app.MapGet("/", () => "Hello World!");
